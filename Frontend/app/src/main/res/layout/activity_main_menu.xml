@@ -1,0 +1,610 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/loadWizardOneName"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layoutDescription="@xml/activity_main_menu_scene"
+    tools:context=".main.MainMenuActivity">
+
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="845dp"
+        android:layout_height="412dp"
+        android:scaleType="fitXY"
+        android:scaleX="1.1"
+        android:scaleY="1.1"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.526"
+        app:srcCompat="@drawable/background" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/guideline8"
+        app:layout_constraintEnd_toStartOf="@+id/guideline11"
+        app:layout_constraintStart_toStartOf="@+id/guideline10"
+        app:layout_constraintTop_toTopOf="@+id/guideline9"
+        app:srcCompat="@drawable/sprite_logo" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="25dp"
+        android:divider="@drawable/empty_tall_divider"
+        android:orientation="horizontal"
+        android:showDividers="middle"
+        android:weightSum="4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="1dp"
+            android:layout_height="1dp" />
+
+
+        <ImageButton
+            android:id="@+id/continueGame"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/empty_tall_divider"
+            android:contentDescription="@string/app_name"
+            android:cropToPadding="false"
+            android:scaleType="fitXY"
+            android:src="@drawable/button" />
+
+        <ImageButton
+            android:id="@+id/newWizard"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/empty_tall_divider"
+            android:contentDescription="@string/app_name"
+            android:cropToPadding="false"
+            android:scaleType="fitXY"
+            android:src="@drawable/button" />
+
+        <ImageButton
+            android:id="@+id/loadWizard"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/empty_tall_divider"
+            android:contentDescription="@string/app_name"
+            android:cropToPadding="false"
+            android:scaleType="fitXY"
+            android:src="@drawable/button" />
+
+        <ImageButton
+            android:id="@+id/settings"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/empty_tall_divider"
+            android:contentDescription="@string/app_name"
+            android:cropToPadding="false"
+            android:scaleType="fitXY"
+            android:src="@drawable/button" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="1dp"
+            android:layout_height="1dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="25dp"
+        android:divider="@drawable/empty_tall_divider"
+        android:orientation="horizontal"
+        android:showDividers="middle"
+        android:weightSum="4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="1dp"
+            android:layout_height="1dp" />
+
+        <TextView
+            android:id="@+id/continueText"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:fontFamily="@font/press_start_2p"
+            android:paddingTop="15dp"
+            android:text="Continue"
+            android:textAlignment="center"
+            android:textColor="#FFF"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/newWizardText"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:fontFamily="@font/press_start_2p"
+            android:paddingTop="15dp"
+            android:text="New"
+            android:textAlignment="center"
+            android:textColor="#FFF"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/loadWizardText"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:fontFamily="@font/press_start_2p"
+            android:paddingTop="15dp"
+            android:text="Load"
+            android:textAlignment="center"
+            android:textColor="#FFF"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/settingText"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:fontFamily="@font/press_start_2p"
+            android:paddingTop="15dp"
+            android:text="Settings"
+            android:textAlignment="center"
+            android:textColor="#FFF"
+            android:textSize="16sp" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="1dp"
+            android:layout_height="1dp" />
+
+    </LinearLayout>
+
+
+    <androidx.constraintlayout.widget.Group
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="guideline8,guideline9,guideline4,guideline10,guideline11,guideline2,guideline3" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.4" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.04784689" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.04784689" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.024875622" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.98" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75" />
+
+    <ImageView
+        android:id="@+id/loadWizardBack"
+        android:layout_width="383dp"
+        android:layout_height="274dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="@+id/guideline9"
+        app:srcCompat="@drawable/load_wizard_background" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="360dp"
+        android:layout_height="250dp"
+        android:orientation="vertical"
+        android:weightSum="3"
+        app:layout_constraintBottom_toBottomOf="@+id/loadWizardBack"
+        app:layout_constraintEnd_toEndOf="@+id/loadWizardBack"
+        app:layout_constraintStart_toStartOf="@+id/loadWizardBack"
+        app:layout_constraintTop_toTopOf="@+id/loadWizardBack">
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="loadCardOne,loadWizardOneText" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="loadWizardTwoText,loadCardTwo" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="loadCardThree,loadWizardThreeText" />
+
+        <ImageButton
+            android:id="@+id/loadCardOne"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:background="@drawable/load_wizard_card"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/load_wizard_card"
+            tools:ignore="SpeakableTextPresentCheck"
+            tools:layout_editor_absoluteX="479dp"
+            tools:layout_editor_absoluteY="63dp" />
+
+        <ImageButton
+            android:id="@+id/loadCardTwo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:background="@drawable/load_wizard_card"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/load_wizard_card"
+            tools:ignore="SpeakableTextPresentCheck"
+            tools:layout_editor_absoluteX="479dp"
+            tools:layout_editor_absoluteY="63dp" />
+
+        <ImageButton
+            android:id="@+id/loadCardThree"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:background="@drawable/load_wizard_card"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/load_wizard_card"
+            tools:ignore="SpeakableTextPresentCheck"
+            tools:layout_editor_absoluteX="479dp"
+            tools:layout_editor_absoluteY="63dp" />
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/deleteOne"
+        android:layout_width="36dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="330dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/delete_button"
+        app:srcCompat="@drawable/delete_button"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="@+id/loadWizardBack"
+        app:layout_constraintTop_toTopOf="@+id/loadWizardBack" />
+
+
+    <ImageButton
+        android:id="@+id/deleteTwo"
+        android:layout_width="36dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="330dp"
+        android:layout_marginTop="120dp"
+        android:background="@drawable/delete_button"
+        app:srcCompat="@drawable/delete_button"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="@+id/loadWizardBack"
+        app:layout_constraintTop_toTopOf="@+id/loadWizardBack" />
+
+    <ImageButton
+        android:id="@+id/deleteThree"
+        android:layout_width="36dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="330dp"
+        android:layout_marginTop="204dp"
+        android:background="@drawable/delete_button"
+        app:srcCompat="@drawable/delete_button"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="@+id/loadWizardBack"
+        app:layout_constraintTop_toTopOf="@+id/loadWizardBack" />
+
+    <TextView
+        android:id="@+id/loadWizardOneText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="9dp"
+        android:fontFamily="@font/press_start_2p"
+        android:text="Empty slot"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout2"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout2" />
+
+    <TextView
+        android:id="@+id/loadWizardOneHp"
+        android:layout_width="115dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="67dp"
+        android:layout_marginTop="37dp"
+        android:fontFamily="@font/press_start_2p"
+        android:text="150/200"
+        android:textAlignment="center"
+        android:textColor="#F43B3B"
+        android:textSize="6dp"
+        android:typeface="normal"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout2"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout2" />
+
+    <TextView
+        android:id="@+id/loadWizardOneXP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="103dp"
+        android:layout_marginTop="58dp"
+        android:fontFamily="@font/press_start_2p"
+        android:text="1239/10023 xp"
+        android:textColor="#73E475"
+        android:textSize="6dp"
+        android:typeface="normal"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout2"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout2" />
+
+    <TextView
+        android:id="@+id/loadWizardOneLvl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="275dp"
+        android:layout_marginTop="18dp"
+        android:fontFamily="@font/press_start_2p"
+        android:text="Lvl. 123"
+        android:textColor="#FFFFFF"
+        android:textSize="6dp"
+        android:typeface="normal"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout2"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout2" />
+
+    <TextView
+        android:id="@+id/loadWizardOneMana"
+        android:layout_width="60dp"
+        android:layout_height="7dp"
+        android:layout_marginStart="145dp"
+        android:layout_marginTop="38dp"
+        android:autoText="false"
+        android:fontFamily="@font/press_start_2p"
+        android:text="100/210"
+        android:textAlignment="center"
+        android:textColor="#3B69F4"
+        android:textSize="6dp"
+        android:typeface="normal"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout2"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout2" />
+
+    <TextView
+        android:id="@+id/loadWizardTwoText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="93dp"
+        android:fontFamily="@font/press_start_2p"
+        android:text="Empty slot"
+        android:textColor="#FFFFFF"
+        android:typeface="normal"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout2"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout2" />
+
+    <TextView
+        android:id="@+id/loadWizardTwoLvl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="275dp"
+        android:layout_marginTop="101dp"
+        android:fontFamily="@font/press_start_2p"
+        android:text="Lvl. 123"
+        android:textColor="#FFFFFF"
+        android:textSize="6dp"
+        android:typeface="normal"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout2"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout2" />
+
+    <TextView
+        android:id="@+id/loadWizardTwoMana"
+        android:layout_width="60dp"
+        android:layout_height="7dp"
+        android:layout_marginStart="145dp"
+        android:layout_marginTop="120dp"
+        android:autoText="false"
+        android:fontFamily="@font/press_start_2p"
+        android:text="100/210"
+        android:textAlignment="center"
+        android:textColor="#3B69F4"
+        android:textSize="6dp"
+        android:typeface="normal"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout2"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout2" />
+
+    <TextView
+        android:id="@+id/loadWizardTwoHp"
+        android:layout_width="115dp"
+        android:layout_height="5dp"
+        android:layout_marginStart="67dp"
+        android:layout_marginTop="121dp"
+        android:fontFamily="@font/press_start_2p"
+        android:text="150/200"
+        android:textAlignment="center"
+        android:textColor="#F43B3B"
+        android:textSize="6dp"
+        android:typeface="normal"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout2"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout2" />
+
+    <TextView
+        android:id="@+id/loadWizardTwoXP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="103dp"
+        android:layout_marginTop="140dp"
+        android:fontFamily="@font/press_start_2p"
+        android:text="1239/10023 xp"
+        android:textColor="#73E475"
+        android:textSize="6dp"
+        android:typeface="normal"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout2"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout2" />
+
+    <TextView
+        android:id="@+id/loadWizardThreeXP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="103dp"
+        android:layout_marginTop="224dp"
+        android:fontFamily="@font/press_start_2p"
+        android:text="1239/10023 xp"
+        android:textColor="#73E475"
+        android:textSize="6dp"
+        android:typeface="normal"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout2"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout2" />
+
+    <TextView
+        android:id="@+id/loadWizardThreeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="176dp"
+        android:fontFamily="@font/press_start_2p"
+        android:text="Empty slot"
+        android:textColor="#FFFFFF"
+        android:typeface="normal"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout2"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout2" />
+
+    <TextView
+        android:id="@+id/loadWizardThreeLvl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="275dp"
+        android:layout_marginTop="184dp"
+        android:fontFamily="@font/press_start_2p"
+        android:text="Lvl. 123"
+        android:textColor="#FFFFFF"
+        android:textSize="6dp"
+        android:typeface="normal"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout2"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout2" />
+
+    <TextView
+        android:id="@+id/loadWizardThreeMana"
+        android:layout_width="60dp"
+        android:layout_height="7dp"
+        android:layout_marginStart="145dp"
+        android:layout_marginTop="203dp"
+        android:autoText="false"
+        android:fontFamily="@font/press_start_2p"
+        android:text="100/210"
+        android:textAlignment="center"
+        android:textColor="#3B69F4"
+        android:textSize="6dp"
+        android:typeface="normal"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout2"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout2" />
+
+    <TextView
+        android:id="@+id/loadWizardThreeHp"
+        android:layout_width="115dp"
+        android:layout_height="5dp"
+        android:layout_marginStart="67dp"
+        android:layout_marginTop="204dp"
+        android:fontFamily="@font/press_start_2p"
+        android:text="150/200"
+        android:textAlignment="center"
+        android:textColor="#F43B3B"
+        android:textSize="6dp"
+        android:typeface="normal"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout2"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout2" />
+
+    <ImageButton
+        android:id="@+id/loadWizardClose"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="354dp"
+        android:layout_marginBottom="246dp"
+        android:background="@drawable/closebutton"
+        android:contentDescription="@string/app_name"
+        android:scaleType="fitXY"
+        android:src="@drawable/closebutton"
+        app:layout_constraintBottom_toBottomOf="@+id/loadWizardBack"
+        app:layout_constraintStart_toStartOf="@+id/loadWizardBack"
+        app:srcCompat="@drawable/closebutton"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <ImageView
+        android:id="@+id/cardOneImage"
+        android:layout_width="45dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintStart_toStartOf="@+id/loadWizardBack"
+        app:layout_constraintTop_toTopOf="@+id/loadWizardBack"
+        tools:srcCompat="?attr/selectableItemBackground" />
+
+    <ImageView
+        android:id="@+id/cardTwoImage"
+        android:layout_width="45dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="112dp"
+        app:layout_constraintStart_toStartOf="@+id/loadWizardBack"
+        app:layout_constraintTop_toTopOf="@+id/loadWizardBack"
+        tools:srcCompat="?attr/selectableItemBackground" />
+
+    <ImageView
+        android:id="@+id/cardThreeImage"
+        android:layout_width="45dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="196dp"
+        app:layout_constraintStart_toStartOf="@+id/loadWizardBack"
+        app:layout_constraintTop_toTopOf="@+id/loadWizardBack"
+        tools:srcCompat="?attr/selectableItemBackground" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

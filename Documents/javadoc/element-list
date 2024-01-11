@@ -1,0 +1,12 @@
+com.example.wizard309
+com.example.wizard309.entities
+com.example.wizard309.entities.enemies
+com.example.wizard309.environments
+com.example.wizard309.gamestates
+com.example.wizard309.helpers
+com.example.wizard309.helpers.interfaces
+com.example.wizard309.main
+com.example.wizard309.ui
+com.example.wizard309.volley.app
+com.example.wizard309.volley.net_utils
+com.example.wizard309.WebSockets

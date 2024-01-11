@@ -1,0 +1,107 @@
+stages:
+  - cleanup
+  - mavenbuild
+  - maventest
+  - mavenDeploy
+  - startJar
+  - androidbuild
+  - androidtest
+
+docker-cleanup:
+  stage: cleanup
+  tags:
+    - Docker-Clean
+  script:
+    - sudo docker system prune -a -f
+    - sudo docker volume prune -f
+  only:
+    - Dev
+    - main
+
+maven-build:
+  stage: mavenbuild
+  tags:
+    - Spingboot_Runner
+  script:
+    - java --version
+    - cd "Backend/MySQL connection test" # to where you have the pom.xml
+    - mvn package
+  only:
+    - Dev
+    - main
+
+maven-test:
+  stage: maventest
+  tags:
+    - Spingboot_Runner
+  script:
+    - cd "Backend/MySQL connection test"
+    - mvn test
+  artifacts:
+    paths:
+      - Backend/MySQL connection test/target/*.jar
+  only:
+    - Dev
+    - main
+
+autoDeploy:
+  stage: mavenDeploy
+  tags:
+    - Spingboot_Runner
+  script:
+    - cd "Backend/MySQL connection test"
+    - mvn package
+    - sudo mv target/*.jar /target/web-demo.jar 
+    - sudo systemctl stop system-web-demo
+    - sudo systemctl start system-web-demo
+  only:
+    - Dev
+    - main
+
+start-jar:
+  stage: startJar
+  tags:
+    - Spingboot_Runner
+  before_script:
+    - sudo yum update -y
+    - sudo yum install -y tmux
+  script:
+    - if tmux has-session; then tmux kill-server; fi
+    - tmux new-session -d -s my_session 'java -jar Backend/MySQL connection test/target/*.jar'
+  only:
+    - Dev
+    - main
+
+android-build:
+  image: mingc/android-build-box:latest
+  stage: androidbuild
+  tags:
+    - Android_Runner
+  before_script:
+    - export GRADLE_USER_HOME=`pwd`/.gradle
+    - chmod +x ./Frontend/gradlew
+  script:
+    - java --version
+    - cd Frontend # to where you have ‘gradlew’
+    - ./gradlew build
+  artifacts:
+    paths:
+      - Frontend/app/build/outputs/
+  only:
+    - Dev
+    - main
+
+android-test:
+  image: mingc/android-build-box:latest
+  stage: androidtest
+  tags:
+    - Android_Runner 
+  before_script:
+    - export GRADLE_USER_HOME=`pwd`/.gradle
+    - chmod +x ./Frontend/gradlew
+  script:
+    - cd Frontend
+    - ./gradlew test
+  only:
+    - Dev
+    - main
